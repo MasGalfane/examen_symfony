@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    {% for category in categories %}
+        <p>{{ category.name }}</p>
+
+        {% for subCategory in category.subCategories %}
+            <p><strong>{{ subCategory.name }}</strong></p>
+            {#            <a href="{{ path('subCategory.name') }}">Lien</a>#}
+   {% endfor %}
+
+
+    {% endfor %}
+
+{% endblock %}
